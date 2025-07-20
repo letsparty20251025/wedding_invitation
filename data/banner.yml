@@ -1,5 +1,5 @@
 ####################### Banner #########################
-style: "style5 color5 fullscreen image-position-center onload-image-fade-in"
+style: "style5 color5 fullscreen image-position-center"
 title : "Hugo Story"
 subtitle: |
   Hugo Story released for free under the <a target="_blank" href="https://creativecommons.org/licenses/by/3.0/">Creative Commons</a>.
