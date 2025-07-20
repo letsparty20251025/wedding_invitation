@@ -8,7 +8,8 @@
             <li><a href="{{ .link }}" class="button primary large wide smooth-scroll-middle">{{ .label }}</a></li>
         </ul>{{ end }}
     </div>
-    {{ with .image }}<div class="image">
-        <img src="{{.}}" alt="Hugo Story" />
+    {{ with .image }}<div class="image responsive-image">
+        <img src="{{.}}" alt="Hugo Story" loading="lazy" 
+             class="responsive-img" />
     </div>{{end}}
 </section>

@@ -1,12 +1,14 @@
 ####################### Banner #########################
-style: "style5 color5 fullscreen image-position-center"
-title : "Hugo Story"
-subtitle: |
-  Hugo Story released for free under the <a target="_blank" href="https://creativecommons.org/licenses/by/3.0/">Creative Commons</a>.
-content : |
-  This is a <strong>Banner</strong> element, and it's generally used as an introduction or opening statement. You can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-banner">details</a>).
-button:
-  label : "Get Started"
-  link : "#first"
-image : "images/wedding/YR5_4748.jpg"
+# style: "style1 color5 image-position-center"
+# title : "Hugo Story"
+# subtitle: |
+#   Hugo Story released for free under the <a target="_blank" href="https://creativecommons.org/licenses/by/3.0/">Creative Commons</a>.
+# content : |
+#   This is a <strong>Banner</strong> element, and it's generally used as an introduction or opening statement. You can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-banner">details</a>).
+
+# button:
+#   label : "Get Started"
+#   link : "#first"
+
+image : "images/wedding/01-cover.png"
 

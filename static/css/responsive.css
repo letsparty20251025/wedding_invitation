@@ -1,0 +1,193 @@
+/* Responsive Web Design (RWD) Styles for Banner Image */
+
+/* Enhanced responsive image styles */
+.banner .image.responsive-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.banner .image.responsive-image .responsive-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  display: block;
+}
+
+/* Responsive container adjustments */
+.banner.style5 {
+  min-height: 100vh;
+}
+
+/* Mobile-first responsive breakpoints */
+@media screen and (max-width: 480px) {
+  .banner.style5 {
+    min-height: 60vh;
+  }
+  
+  .banner .image.responsive-image .responsive-img {
+    object-position: center 20%;
+  }
+  
+  .banner .content {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .banner.style5 {
+    min-height: 70vh;
+  }
+  
+  .banner .image.responsive-image .responsive-img {
+    object-position: center 30%;
+  }
+  
+  .banner .content {
+    padding: 3rem 2rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .banner.style5 {
+    min-height: 80vh;
+  }
+  
+  .banner .image.responsive-image .responsive-img {
+    object-position: center center;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .banner.style5 {
+    min-height: 100vh;
+  }
+  
+  .banner .image.responsive-image .responsive-img {
+    object-position: center center;
+  }
+}
+
+/* Tablet landscape orientation adjustments */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .banner.style5 {
+    min-height: 100vh;
+  }
+}
+
+/* Portrait orientation specific adjustments */
+@media screen and (orientation: portrait) {
+  .banner .image.responsive-image .responsive-img {
+    object-position: center 25%;
+  }
+}
+
+/* Landscape orientation specific adjustments */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  .banner.style5 {
+    min-height: 100vh;
+  }
+  
+  .banner .image.responsive-image .responsive-img {
+    object-position: center center;
+  }
+}
+
+/* Hover and interaction effects */
+.banner .image.responsive-image:hover .responsive-img {
+  transform: scale(1.02);
+}
+
+/* Focus styles for accessibility */
+.banner .image.responsive-image .responsive-img:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
+}
+
+/* High-resolution displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+  .banner .image.responsive-image .responsive-img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Custom positioning overrides */
+.banner.image-position-center .image.responsive-image .responsive-img {
+  object-position: center center;
+}
+
+.banner.image-position-left .image.responsive-image .responsive-img {
+  object-position: left center;
+}
+
+.banner.image-position-right .image.responsive-image .responsive-img {
+  object-position: right center;
+}
+
+.banner.image-position-top .image.responsive-image .responsive-img {
+  object-position: center top;
+}
+
+.banner.image-position-bottom .image.responsive-image .responsive-img {
+  object-position: center bottom;
+}
+
+/* Lazy loading optimization */
+.banner .image.responsive-image .responsive-img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.banner .image.responsive-image .responsive-img[loading="lazy"].loaded,
+.banner .image.responsive-image .responsive-img.loaded {
+  opacity: 1;
+}
+
+/* Loading placeholder */
+.banner .image.responsive-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  z-index: -1;
+}
+
+.banner .image.responsive-image .responsive-img.loaded + .banner .image.responsive-image::before,
+.banner .image.responsive-image.loaded::before {
+  display: none;
+}
+
+@keyframes loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .banner .image.responsive-image .responsive-img {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .banner {
+    min-height: auto !important;
+    height: auto !important;
+  }
+}
